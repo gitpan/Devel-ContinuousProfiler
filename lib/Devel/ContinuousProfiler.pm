@@ -3,7 +3,7 @@ package Devel::ContinuousProfiler;
 
 use strict;
 our %DATA;
-our $VERSION = '0.01';
+our $VERSION = '0.02';
 use XSLoader;
 XSLoader::load(__PACKAGE__, $VERSION);
 
@@ -41,9 +41,6 @@ sub take_snapshot {
     };
 
     return;
-}
-if ($] >= 5.014_000) {
-    delete $Devel::ContinuousProfiler::{'take_snapshot'};
 }
 
 'I am an anarchist
