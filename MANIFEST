@@ -9,5 +9,6 @@ lib/Devel/ContinuousProfiler.pm
 ppport.h
 t/basic.t
 t/basic.t~
+t/load.t
 t/release-pod-coverage.t
 t/release-pod-syntax.t

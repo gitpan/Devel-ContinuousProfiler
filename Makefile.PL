@@ -12,7 +12,8 @@ my %WriteMakefileArgs = (
   'ABSTRACT' => 'Ultra cheap profiling for use in production environments',
   'AUTHOR' => 'Josh Jore <jjore@cpan.org>',
   'BUILD_REQUIRES' => {
-    'ExtUtils::CBuilder' => '0'
+    'ExtUtils::CBuilder' => '0',
+    'perl' => '5.10.0'
   },
   'CONFIGURE_REQUIRES' => {
     'ExtUtils::MakeMaker' => '6.31'
@@ -22,7 +23,7 @@ my %WriteMakefileArgs = (
   'LICENSE' => 'perl',
   'NAME' => 'Devel::ContinuousProfiler',
   'PREREQ_PM' => {},
-  'VERSION' => '0.02',
+  'VERSION' => '0.04',
   'test' => {
     'TESTS' => 't/*.t'
   }

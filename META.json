@@ -16,7 +16,8 @@
    "prereqs" : {
       "build" : {
          "requires" : {
-            "ExtUtils::CBuilder" : 0
+            "ExtUtils::CBuilder" : 0,
+            "perl" : "v5.10.0"
          }
       },
       "configure" : {
@@ -38,6 +39,6 @@
          "web" : "http://github.com/jbenjore/Devel-ContinuousProfiler"
       }
    },
-   "version" : "0.02"
+   "version" : "0.04"
 }
 
