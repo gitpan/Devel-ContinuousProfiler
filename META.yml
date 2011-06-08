@@ -18,4 +18,4 @@ resources:
   bugtracker: http://rt.cpan.org/NoAuth/Bugs.html?Dist=Devel-ContinuousProfiler
   homepage: http://search.cpan.org/dist/Devel-ContinuousProfiler
   repository: git://github.com/jbenjore/Devel-ContinuousProfiler.git
-version: 0.04
+version: 0.05
