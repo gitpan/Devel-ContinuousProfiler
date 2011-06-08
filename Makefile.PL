@@ -13,7 +13,7 @@ my %WriteMakefileArgs = (
   'AUTHOR' => 'Josh Jore <jjore@cpan.org>',
   'BUILD_REQUIRES' => {
     'ExtUtils::CBuilder' => '0',
-    'perl' => '5.10.0'
+    'perl' => 'v5.10.0'
   },
   'CONFIGURE_REQUIRES' => {
     'ExtUtils::MakeMaker' => '6.31'
@@ -23,7 +23,7 @@ my %WriteMakefileArgs = (
   'LICENSE' => 'perl',
   'NAME' => 'Devel::ContinuousProfiler',
   'PREREQ_PM' => {},
-  'VERSION' => '0.05',
+  'VERSION' => '0.06',
   'test' => {
     'TESTS' => 't/*.t'
   }
