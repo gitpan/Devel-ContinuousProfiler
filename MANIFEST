@@ -6,12 +6,11 @@ META.yml
 Makefile.PL
 dist.ini
 eg/sample.pl
-eg/sample.pl~
 lib/Devel/ContinuousProfiler.pm
 ppport.h
 t/basic.t
-t/basic.t~
+t/load.gdb
+t/load.pl
 t/load.t
 t/release-pod-coverage.t
 t/release-pod-syntax.t
-x~

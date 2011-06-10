@@ -19,11 +19,6 @@
             "ExtUtils::CBuilder" : 0,
             "perl" : "v5.10.0"
          }
-      },
-      "configure" : {
-         "requires" : {
-            "ExtUtils::MakeMaker" : "6.31"
-         }
       }
    },
    "release_status" : "stable",
@@ -39,6 +34,6 @@
          "web" : "http://github.com/jbenjore/Devel-ContinuousProfiler"
       }
    },
-   "version" : "0.08"
+   "version" : "0.09"
 }
 
