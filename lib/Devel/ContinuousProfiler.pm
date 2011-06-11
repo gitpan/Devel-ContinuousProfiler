@@ -19,7 +19,7 @@ our $FRAME_FORMAT;
 our $FRAME_FORMAT2;
 our $OUTPUT_HANDLE;
 our $OUTPUT_SEEKABLE;
-our $VERSION = '0.11';
+our $VERSION = '0.12';
 
 XSLoader::load(__PACKAGE__, $VERSION);
 
@@ -42,25 +42,37 @@ $FRAME_FORMAT2 = '%' . (1+_FILE) . '$s' unless defined $FRAME_FORMAT2;
 END { report() }
 
 sub frame_format {
-    return ( $FRAME_FORMAT, $FRAME_FORMAT2 ) = @_;
+    if (@_) {
+        return ( $FRAME_FORMAT, $FRAME_FORMAT2 ) = @_;
+    }
+    else {
+        return ( $FRAME_FORMAT, $FRAME_FORMAT2 );
+    }
 }
 
 sub output_handle {
-    $OUTPUT_SEEKABLE = 1;
-    return $OUTPUT_HANDLE = shift;
+    if (@_) {
+        $OUTPUT_SEEKABLE = 1;
+        return $OUTPUT_HANDLE = shift;
+    }
+    else {
+        return ($OUTPUT_HANDLE, $OUTPUT_SEEKABLE);
+    }
 }
 
 sub output_filename {
     my ( $file ) = @_;
 
-    ## no critic (InputOutput::RequireBriefOpen)
-    $OUTPUT_SEEKABLE = 0;
-    open $OUTPUT_HANDLE, '>', $file
-        or do {
-            warn "Can't open $file: $ERRNO";
-            return;
-        };
-    $OUTPUT_SEEKABLE = 1;
+    if ($file) {
+        ## no critic (InputOutput::RequireBriefOpen)
+        $OUTPUT_SEEKABLE = 0;
+        open $OUTPUT_HANDLE, '>', $file
+            or do {
+                warn "Can't open $file: $ERRNO";
+                return;
+            };
+        $OUTPUT_SEEKABLE = 1;
+    }
 
     return $file;
 }
@@ -209,7 +221,7 @@ Devel::ContinuousProfiler - Ultra cheap profiling for use in production
 
 =head1 VERSION
 
-version 0.11
+version 0.12
 
 =head1 SYNOPSIS
 

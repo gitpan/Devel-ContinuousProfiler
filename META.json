@@ -13,14 +13,7 @@
       "version" : "2"
    },
    "name" : "Devel-ContinuousProfiler",
-   "prereqs" : {
-      "build" : {
-         "requires" : {
-            "ExtUtils::CBuilder" : 0,
-            "perl" : "v5.10.0"
-         }
-      }
-   },
+   "prereqs" : {},
    "release_status" : "stable",
    "resources" : {
       "bugtracker" : {
@@ -34,6 +27,6 @@
          "web" : "http://github.com/jbenjore/Devel-ContinuousProfiler"
       }
    },
-   "version" : "0.11"
+   "version" : "0.12"
 }
 
