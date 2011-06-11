@@ -19,7 +19,7 @@ our $FRAME_FORMAT;
 our $FRAME_FORMAT2;
 our $OUTPUT_HANDLE;
 our $OUTPUT_SEEKABLE;
-our $VERSION = '0.09';
+our $VERSION = '0.11';
 
 XSLoader::load(__PACKAGE__, $VERSION);
 
@@ -209,7 +209,7 @@ Devel::ContinuousProfiler - Ultra cheap profiling for use in production
 
 =head1 VERSION
 
-version 0.09
+version 0.11
 
 =head1 SYNOPSIS
 
